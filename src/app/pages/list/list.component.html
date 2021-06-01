@@ -1,0 +1,23 @@
+<h1><span>Search</span> Pokemon</h1>
+<p>Search about your favorite Pokemon on TCG!</p>
+<div class="busca">
+    <input type="search" name="busca" class="input-busca" id="input-busca" [(ngModel)]="busca">
+    <button class="btn-busca" (click)="search()"><img src="/assets/pokeball.png" alt="Pokeball">Search</button>
+</div>
+<div class="cartas-pokemon">
+    <a routerLink="/card/{{ pokemon.id }}" class="carta" style="background-image: url({{pokemon.images.small}});"
+        *ngFor="let pokemon of pokemons; let i = index">
+        <div class="carta-info">
+            <h4>
+                {{ pokemon.name }} <br>
+                <small>{{ pokemon.id }}</small>
+            </h4>
+            <img src="/assets/pokeball.png" alt="Pokeball">
+        </div>
+    </a>
+</div>
+<div class="botoes">
+    <button class="btn-busca btn-load" (click)="prevPage()" *ngIf="page > 1">Prev Page</button>
+    <button class="btn-busca btn-load" (click)="nextPage()">Next Page</button>
+    <button class="btn-busca btn-load" (click)="allPoke()" *ngIf="buscador">All Pokemons</button>
+</div>

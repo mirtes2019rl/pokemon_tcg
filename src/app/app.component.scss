@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: #96031A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 100px;
+}
+
+.lista-pokemon{
+    width: 100%;
+    background-color: #FFF;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 1280px;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    font-family: 'Bebas Neue', cursive;
+}
+
+p{
+    font-family: 'Cairo', sans-serif;
+    margin-bottom: 20px;
+}
+
+.lista-pokemon h1{
+    text-align: center;
+    font-size: 52px;
+}
+
+.lista-pokemon p{
+    text-align: center;
+    font-size: 26px;
+}
+
+.lista-pokemon h1 span{
+    color: #96031A;
+}
+
+.busca{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.busca .input-busca{
+    flex: 1;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 14px;
+    outline-color: #96031A;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.btn-busca{
+    background-color: #96031A;
+    border-radius: 5px;
+    border: 2px solid #96031A;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.btn-busca:hover{
+    background-color: #fff;
+    color: #96031A;
+}
+
+.busca .btn-busca img{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.busca .btn-busca:hover img{
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.btn-load{
+    margin: 30px auto 0;
+}
+
+.cartas-pokemon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cartas-pokemon .carta{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 24%;
+    margin-top: 20px;
+    height: 342px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.cartas-pokemon .carta-info{
+    display: none;
+    background-color: #000000ca;
+    width: 100%;
+    height: 342px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartas-pokemon .carta-info h4{
+    text-align: center;
+    font-size: 28px;
+}
+
+.cartas-pokemon .carta-info img{
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.carta:hover .carta-info{
+    display: flex;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media(max-width:996px){
+    body{
+        padding: 20px;
+    }
+
+    .lista-pokemon{
+        padding: 15px;
+    }
+
+    .lista-pokemon h1{
+        margin-bottom: 10px;
+        font-size: 42px;
+    }
+
+    .lista-pokemon p{     
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .busca{
+        flex-direction: column;
+    }
+    
+    .busca .input-busca{
+        margin-right: 0;
+        font-size: 18px;
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-busca{
+        width: 100%;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .cartas-pokemon .carta-info,
+    .cartas-pokemon .carta{
+        width: 100%;
+        height: 420px;
+    }
+}
+
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head p,
+.head h1{
+    margin-bottom: 0;
+}
+
+.pokemon-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.pokemon-info > img{
+    width: 40%;
+    margin-right: 50px;
+}
+
+.pokemon-info > .pokemon-texto p{
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.pokemon-info h2{
+    margin: 15px 0;
+}
+
+.pokemon-info h3{
+    font-size: 22px;
+    color: #96031A;
+}
+ 
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin-bottom: 20px;
+}
+
+@media(max-width:996px){
+    .pokemon-info{
+        flex-direction: column;
+    }
+
+    .pokemon-info > img{
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

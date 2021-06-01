@@ -1,0 +1,26 @@
+<div class="head">
+    <h1>{{ pokemon.name }}</h1>
+    <p><strong>ID: </strong>{{ pokemon.id }}</p>
+</div>
+<div class="pokemon-info">
+    <img src="{{ pokemon.images.large }}" alt="Pokemon Card">
+    <div class="pokemon-texto">
+        <p><strong>Type: </strong>{{pokemon.types}}</p>
+        <p><strong>Weaknesses: </strong>
+            <span *ngFor="let weak of pokemon.weaknesses">{{ weak.type }} | </span>
+        </p>
+        <p><strong>Resistances: </strong>
+            <span *ngFor="let res of pokemon.resistances">{{ res.type }} | </span>
+        </p>
+        <h2>Attacks</h2>
+        <ul>
+            <li *ngFor="let att of pokemon.attacks">
+                <h3>{{ att.name }}</h3>
+                <p><strong>Cost: </strong>{{ att.cost }}</p>
+                <p><strong>Damage: </strong>{{ att.damage }}</p>
+                <p><strong>Description: </strong>{{ att.text }}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<a routerLink="/" class="btn-busca btn-load">Back to all Pokemons</a>
